@@ -5,7 +5,7 @@ let zero = false;
 const addsToZero = (arr) => {
   for (let i = 0; i < arr.length; i++) {
     for (let j = i + 1; j < arr.length; j++) {
-      if (arr[i] + arr[j] === 0) {
+      if (i !== j && arr[i] + arr[j] === 0) {
         zero = true;
       }
     }
@@ -15,7 +15,7 @@ const addsToZero = (arr) => {
 console.log(addsToZero([1, 2, 3]));
 
 //time complexity: O(n^2)
-//space complexity: O(n^2)
+//space complexity: O(1)
 
 
 /////Write a function that takes in a single word, as a string. It should return True if that word contains only unique characters. Return False otherwise./////
@@ -51,8 +51,8 @@ const isPangram = (str) => {
 }
 console.log(isPangram("I like cats, but not mice"))
 
-//time complexity: O(2)
-//space complexity: O(2)
+//time complexity: O(1)
+//space complexity: O(1)
 
 
 /////Write a function, find_longest_word, that takes a list of words and returns the length of the longest one./////
@@ -69,4 +69,4 @@ const findLongestWord = (arr) => {
 console.log(findLongestWord(['hi', 'hello', 'heeeyyyy']))
 
 //time complexity: O(n)
-//space complexity: O(n)
+//space complexity: O(1)
